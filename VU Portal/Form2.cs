@@ -84,85 +84,107 @@ namespace VU_Portal
         {
             string Date = dateTimePicker1.Text;
 
-            if (comboBox1.Text != null)
+            /*if (lab1.Text!=null)
             {
-                if (radioButton1.Checked == true)
+                SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bihara Numanshi\OneDrive\Documents\VU Portal.mdf"";Integrated Security=True;Connect Timeout=30");
+                string qryy = "SELECT * FROM Student where ID_NO='" + lab1.Text + "'";
+                SqlCommand cmd3 = new SqlCommand(qryy, con1);
+                con1.Open();
+                using (SqlDataReader drr = cmd3.ExecuteReader())
                 {
-                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bihara Numanshi\OneDrive\Documents\VU Portal.mdf"";Integrated Security=True;Connect Timeout=30");
-                    string qry = "insert into ResourceMNG(ID_NO,Course_ID,Unit_Name,Resource_Name,Date) values('" + Form1.instance.tb1.Text + "','" + label7.Text + "','" + comboBox1.Text + "','" + radioButton1.Text + "','"+ Date +"')";
-                    SqlCommand cmd = new SqlCommand(qry, con);
+                    if (drr.Read() == true)
+                    {
 
-                    try
-                    {
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Your request sent for the confirmation.keep in touch with the Mails.");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
+                        if (drr["Status"].ToString() == "Confirm")
+                        {
+                            MessageBox.Show("You already Purchase a Resource");
+                        }
                     }
                 }
-                else if (radioButton2.Checked == true)
-                {
-                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bihara Numanshi\OneDrive\Documents\VU Portal.mdf"";Integrated Security=True;Connect Timeout=30");
-                    string qry = "insert into ResourceMNG(ID_NO,Course_ID,Unit_Name,Resource_Name,Date) values('" + Form1.instance.tb1.Text + "','" + label7.Text + "','" + comboBox1.Text + "','" + radioButton2.Text + "','" + Date + "')";
-                    SqlCommand cmd = new SqlCommand(qry, con);
+            }*/
 
-                    try
-                    {
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Your request sent for the confirmation.keep in touch with the Mails.");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
-                else if (radioButton3.Checked == true)
-                {
-                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bihara Numanshi\OneDrive\Documents\VU Portal.mdf"";Integrated Security=True;Connect Timeout=30");
-                    string qry = "insert into ResourceMNG(ID_NO,Course_ID,Unit_Name,Resource_Name,Date) values('" + Form1.instance.tb1.Text + "','" + label7.Text + "','" + comboBox1.Text + "','" + radioButton3.Text + "','" + Date + "')";
-                    SqlCommand cmd = new SqlCommand(qry, con);
 
-                    try
-                    {
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Your request sent for the confirmation.keep in touch with the Mails.");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
-                else if (radioButton4.Checked == true)
-                {
-                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bihara Numanshi\OneDrive\Documents\VU Portal.mdf"";Integrated Security=True;Connect Timeout=30");
-                    string qry = "insert into ResourceMNG(ID_NO,Course_ID,Unit_Name,Resource_Name,Date) values('" + Form1.instance.tb1.Text + "','" + label7.Text + "','" + comboBox1.Text + "','" + radioButton4.Text + "','" + Date + "')";
-                    SqlCommand cmd = new SqlCommand(qry, con);
-
-                    try
-                    {
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Your request sent for the confirmation.keep in touch with the Mails.");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    
-                }
-                else
-                {
-                    MessageBox.Show("Enter the Unit Type & Resource Type that you want to request the Resource");
-                    
-                }
-            }
             
 
+                if (comboBox1.Text != null)
+                {
+                    if (radioButton1.Checked == true)
+                    {
+                        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bihara Numanshi\OneDrive\Documents\VU Portal.mdf"";Integrated Security=True;Connect Timeout=30");
+                        string qry = "insert into ResourceMNG(ID_NO,Course_ID,Unit_Name,Resource_Name,Date) values('" + Form1.instance.tb1.Text + "','" + label7.Text + "','" + comboBox1.Text + "','" + radioButton1.Text + "','" + Date + "')";
+                        SqlCommand cmd = new SqlCommand(qry, con);
+
+                        try
+                        {
+                            con.Open();
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Your request sent for the confirmation.keep in touch with the Mails.");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    else if (radioButton2.Checked == true)
+                    {
+                        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bihara Numanshi\OneDrive\Documents\VU Portal.mdf"";Integrated Security=True;Connect Timeout=30");
+                        string qry = "insert into ResourceMNG(ID_NO,Course_ID,Unit_Name,Resource_Name,Date) values('" + Form1.instance.tb1.Text + "','" + label7.Text + "','" + comboBox1.Text + "','" + radioButton2.Text + "','" + Date + "')";
+                        SqlCommand cmd = new SqlCommand(qry, con);
+
+                        try
+                        {
+                            con.Open();
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Your request sent for the confirmation.keep in touch with the Mails.");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    else if (radioButton3.Checked == true)
+                    {
+                        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bihara Numanshi\OneDrive\Documents\VU Portal.mdf"";Integrated Security=True;Connect Timeout=30");
+                        string qry = "insert into ResourceMNG(ID_NO,Course_ID,Unit_Name,Resource_Name,Date) values('" + Form1.instance.tb1.Text + "','" + label7.Text + "','" + comboBox1.Text + "','" + radioButton3.Text + "','" + Date + "')";
+                        SqlCommand cmd = new SqlCommand(qry, con);
+
+                        try
+                        {
+                            con.Open();
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Your request sent for the confirmation.keep in touch with the Mails.");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    else if (radioButton4.Checked == true)
+                    {
+                        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bihara Numanshi\OneDrive\Documents\VU Portal.mdf"";Integrated Security=True;Connect Timeout=30");
+                        string qry = "insert into ResourceMNG(ID_NO,Course_ID,Unit_Name,Resource_Name,Date) values('" + Form1.instance.tb1.Text + "','" + label7.Text + "','" + comboBox1.Text + "','" + radioButton4.Text + "','" + Date + "')";
+                        SqlCommand cmd = new SqlCommand(qry, con);
+
+                        try
+                        {
+                            con.Open();
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Your request sent for the confirmation.keep in touch with the Mails.");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter the Unit Type & Resource Type that you want to request the Resource");
+
+                    }
+                }
+
+            
                 
             
 
