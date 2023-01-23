@@ -84,28 +84,6 @@ namespace VU_Portal
         {
             string Date = dateTimePicker1.Text;
 
-            /*if (lab1.Text!=null)
-            {
-                SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bihara Numanshi\OneDrive\Documents\VU Portal.mdf"";Integrated Security=True;Connect Timeout=30");
-                string qryy = "SELECT * FROM Student where ID_NO='" + lab1.Text + "'";
-                SqlCommand cmd3 = new SqlCommand(qryy, con1);
-                con1.Open();
-                using (SqlDataReader drr = cmd3.ExecuteReader())
-                {
-                    if (drr.Read() == true)
-                    {
-
-                        if (drr["Status"].ToString() == "Confirm")
-                        {
-                            MessageBox.Show("You already Purchase a Resource");
-                        }
-                    }
-                }
-            }*/
-
-
-            
-
                 if (comboBox1.Text != null)
                 {
                     if (radioButton1.Checked == true)

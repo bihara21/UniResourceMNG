@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Data.SqlClient;
 
 namespace VU_Portal
 {
@@ -48,13 +49,37 @@ namespace VU_Portal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2();
-            form.Show();
-            this.Hide();
-            Form2.instance.lab1.Text = lab1.Text;
+
+                SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bihara Numanshi\OneDrive\Documents\VU Portal.mdf"";Integrated Security=True;Connect Timeout=30");
+                string qryy = "SELECT * FROM Student where ID_NO='" + lab1.Text + "'";
+                SqlCommand cmd3 = new SqlCommand(qryy, con1);
+                con1.Open();
+                using (SqlDataReader drr = cmd3.ExecuteReader())
+                {
+                    if (drr.Read() == true)
+                    {
+
+                        if (drr["Status"].ToString() == "Confirm")
+                        {
+                            MessageBox.Show("You already Purchase a Resource");
+                        }
+                        else
+                        { 
+                            Form2 form = new Form2();
+                            form.Show();
+                            this.Hide();
+                            Form2.instance.lab1.Text = lab1.Text;
+                        }
+                    }
+                }
+            }
 
 
-        }
+
+
+
+
+        
 
         private void button6_Click(object sender, EventArgs e)
         {
