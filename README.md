@@ -1,2 +1,2 @@
 # VU Portal
-![](UniResourceMNG/Images/Login Page.PNG)
+![](Images/Login Page.PNG)
