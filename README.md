@@ -1,7 +1,7 @@
 # Structure of the System
 
 <p align="center">
-<img src="Images/Login Page.PNG" width="300">
+<img src="Images/Login Page.PNG" width="300" height="300">
 
 <img src="Images/Student Dashboard.PNG" width="300">
 
