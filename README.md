@@ -9,3 +9,5 @@
 
 
 <img src="Images/Teacher Dashboard.PNG" width="300">
+
+<img src="Images/Resourcemng.PNG" width="300">
