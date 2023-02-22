@@ -14,3 +14,6 @@
 
 
 <img src="Images/Restock.PNG" width="300">
+
+
+<img src="Images/Availability.PNG" width="300">
