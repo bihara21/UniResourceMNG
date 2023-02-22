@@ -7,7 +7,7 @@
 
 <img src="Images/Confirmation.PNG" width="300">
 
-
+<p align="left">
 <img src="Images/Teacher Dashboard.PNG" width="300">
 
 <img src="Images/Resourcemng.PNG" width="300">
@@ -17,3 +17,4 @@
 
 
 <img src="Images/Availability.PNG" width="300">
+</p>
