@@ -4,3 +4,5 @@
 <img src="Images/Student Dashboard.PNG" width="300">
 
 <img src="Images/ResourceOrdering.PNG" width="300">
+
+<img src="Images/Confirmation.PNG" width="300">
