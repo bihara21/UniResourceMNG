@@ -6,3 +6,6 @@
 <img src="Images/ResourceOrdering.PNG" width="300">
 
 <img src="Images/Confirmation.PNG" width="300">
+
+
+<img src="Images/Teacher Dashboard.PNG" width="300">
